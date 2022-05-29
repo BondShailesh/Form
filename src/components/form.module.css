@@ -1,6 +1,5 @@
 .form{
     /* marginTop: "40px",width:"50%",backgroundColor:"antiquewhite"  */
-    margin-top: 40px;
     width: 50%;
     background-color: antiquewhite;
     line-height: 2;
@@ -10,3 +9,22 @@
     display: flex;
     text-align: center;
 }
+.tableDiv{
+    width: 50%;
+    background-color: cornsilk;
+    margin-top: "40px";
+    text-align: center;
+
+}
+.table {
+    border: 2px solid black;
+    width: 100%;
+  }
+    
+.th {
+    border-bottom: 1px solid black;
+  }
+    
+.td {
+    text-align: center;
+  }

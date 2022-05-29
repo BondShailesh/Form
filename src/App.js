@@ -6,25 +6,17 @@ import TableItem from './components/TableItem';
 import styles from "../src/components/form.module.css"
 
 function App() {
-  const [tabledata,setTableData] = useState({
-    Name:"",
-    Age: "",
-    Address:"",
-    dept:"",
-    maritalState:"",
-    FileName:""
-  });
+  const [tabledata,setTableData] = useState([]);
 
   const funTable = (dt)=>{
-    setTableData(dt);
+    setTableData([...tabledata,dt]);
   }
   return (
     <div className={styles.app}>
       <Form funTable={funTable}/>
 
-       <Table >
-       <TableItem tabledata={tabledata}/>
-     </Table>
+       <Table tabledata ={tabledata} />
+
     </div>
   );
 }

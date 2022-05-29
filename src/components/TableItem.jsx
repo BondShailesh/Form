@@ -1,17 +1,16 @@
 import React from 'react'
-
-function TableItem({tabledata}) {
-    
+import styles from "./form.module.css"
+function TableItem({tabledata0}) {
+    // 
+    console.log(tabledata0);
   return (
-    <div>
-        <h1>Your Details</h1>
-      <p>Name : {tabledata.Name}</p>
-      <p>  Age : {tabledata.Age}</p>
-      <p> Address : {tabledata.Address}</p>
-      <p>Department : {tabledata.dept}</p>
-      <p>Martial Status : {tabledata.maritalState ? "Married" : ""}</p>
-      {/* <p>Department : {tabledata.FileName}</p> */}
-    </div>
+    <tr>
+          <td className={styles.td}> {tabledata0.Name}</td>
+          <td className={styles.td}>  {tabledata0.Age} </td> 
+          <td className={styles.td}>{tabledata0.Address}</td> 
+          <td className={styles.td}>{tabledata0.dept}</td>
+          <td className={styles.td}>{tabledata0.maritalState ? "Married" : ""} </td>
+    </tr>
   )
 }
 
