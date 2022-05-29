@@ -1,0 +1,12 @@
+.form{
+    /* marginTop: "40px",width:"50%",backgroundColor:"antiquewhite"  */
+    margin-top: 40px;
+    width: 50%;
+    background-color: antiquewhite;
+    line-height: 2;
+    display: flex;
+}
+.app{
+    display: flex;
+    text-align: center;
+}

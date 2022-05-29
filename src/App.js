@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form';
+import Table from './components/Table';
+import { useState } from 'react';
+import TableItem from './components/TableItem';
+import styles from "../src/components/form.module.css"
 
 function App() {
+  const [tabledata,setTableData] = useState({
+    Name:"",
+    Age: "",
+    Address:"",
+    dept:"",
+    maritalState:"",
+    FileName:""
+  });
+
+  const funTable = (dt)=>{
+    setTableData(dt);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <Form funTable={funTable}/>
+
+       <Table >
+       <TableItem tabledata={tabledata}/>
+     </Table>
     </div>
   );
 }
